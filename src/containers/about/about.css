@@ -1,0 +1,19 @@
+* {
+    font-family: var(--font-family);
+    
+}
+
+.about-container{
+    width: 85%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.aboutH2{
+    font-style: italic;
+    color: rgb(162, 161, 161);
+}

@@ -1,0 +1,126 @@
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6rem;
+    z-index: 10;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;    
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: var(--font-family);
+    animation: text-shadow-drop-center .5s both;
+    animation-play-state: paused;
+}
+
+.navbar ul li a,
+.navbar ul li a:after,
+.navbar ul li a:before {
+  transition: all .4s;
+}
+
+.nav-links ul li a::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '';
+    color: transparent;
+    background: #FF914D;
+    height: 3px;
+  }
+
+.nav-links ul li a:hover{
+    animation-play-state: running;
+}
+  
+.nav-links ul li a:hover:after{
+      width: 100%;   
+  }
+
+
+  
+
+.navbar .box {
+    position: relative;
+    height:  100px;
+    width: 100px;
+    display: block;
+    background: #111;
+    background-image:url('../../assets/3.png');
+    background-size: 100px;
+    z-index: 11;
+}
+
+.navbar .glowing::after{
+    content: '';
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    background: linear-gradient(45deg, #e8f74d,  orange, #bd2681, yellow);
+    background-size: 400%;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    z-index: -1;
+    animation: glower 10s linear infinite;
+    box-shadow:    0 0 5px #fff,
+    0 0 15px yellow,
+    0 0 25px #e8f74d,
+    0 0 35px orange,
+    0 0 45px orange;
+}
+
+
+@keyframes glower {
+    0% {
+    background-position: 0 0;
+    box-shadow:    0 0 5px #fff,
+    0 0 15px yellow,
+    0 0 25px #e8f74d,
+    0 0 35px orange,
+    0 0 45px orange;
+  }
+    25% {
+    background-position: 0 400%;
+    box-shadow: 0 0 5px #fff,
+    0 0 15px orange,
+    0 0 25px orange,
+    0 0 35px yellow;
+  }
+  
+    75% {
+    background-position: 400% 0;
+    box-shadow: 0 0 5px #fff,
+    0 0 15px #e8f74d,
+    0 0 25px #e8f74d;
+  }
+  
+    100% {
+    background-position: 0 0;
+    box-shadow:    0 0 5px #fff,
+    0 0 15px yellow,
+    0 0 25px #e8f74d,
+    0 0 35px orange,
+    0 0 45px orange;
+  }
+}
